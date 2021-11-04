@@ -2,17 +2,17 @@
 # Написати скрипт в який, використовуючи метод gets, потрібно передати з консолі назву тварини.
 # Після цього, вивести в консоль наступний текст I like _animal_, де замість _animal_ повинно бути значення отримане з консолі
 
-# puts 'Please, enter a name of the animal'
-# name = gets.chomp
-# puts "I like #{name}"
+puts 'Please, enter a name of the animal'
+name = gets.chomp
+puts "I like #{name}"
 
 # 2
 # Написати скрипт в який, використовуючи метод gets, потрібно передати з консолі ваш вік.
 # Після цього, вивести в консоль, через скількі років вам буде 100 (Текст можете придумати самі)
 
-# puts 'Please, enter your age'
-# age = gets.to_i
-# puts "In #{100 - age} years you`ll be 100"
+puts 'Please, enter your age'
+age = gets.to_i
+puts "In #{100 - age} years you`ll be 100"
 
 # 3
 # Написати скрипт в який, використовуючи метод gets, потрібно передати з консолі список з трьох хоббі та записати їх в змінну
