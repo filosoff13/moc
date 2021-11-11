@@ -14,11 +14,27 @@
 # Умови недотримані, зупиняю виконання програми.
 
 loop do
-puts 'Please, enter a number'
-number = gets.to_i
-if number == 1
-    puts "The result is 256"
-    else puts 'Conditions are incorrect, so stop the program'
-    break
-end
+    puts 'Please, enter a number'
+    number = gets.to_i
+    num = number.digits
+    count_of_numbers = num.count
+
+    count_of_ones = 0
+    i = 0
+    count_of_numbers.times{
+        if num[i] == 1
+        then
+            count_of_ones += 1
+            i += 1
+        else
+            i += 1
+        end
+    }
+
+    if count_of_ones > 1
+        puts 'Conditions are incorrect, so stop the program'
+        break
+    else result = 256 * number
+        puts "The result is #{result}"
+    end
 end
