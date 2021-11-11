@@ -21,14 +21,14 @@ puts "In #{100 - age} years you`ll be 100"
 # Після цього, потрібно обрати випадкове хоббі та вивести в консоль наступний текст Tell me something about _random_hobby_
 # де замість _random_hobby_ повинно бути випадкове хоббі
 hobbies = Array.new
-for i in 0..2
+ 3.times{
     puts 'Please, enter your hobby'
     h = gets.chomp
     hobbies.push(h)
-end
+}
 
-rundom_hobby = hobbies.shuffle.first
-puts "Tell me something about #{rundom_hobby}"
+random_hobby = hobbies.sample
+puts "Tell me something about #{random_hobby}"
 
 
 # 4*
@@ -36,6 +36,10 @@ puts "Tell me something about #{rundom_hobby}"
 # variable_1 = 1
 # variable_2 = 2
 # Потрібно щоб змінні variable_1 та variable_2 обмінялися своїми значеннями без використання третьої змінної
+variable_1 = 1
+variable_2 = 2
+variable_1, variable_2 = variable_2, variable_1
+puts "variable_1 = #{variable_1} and variable_2 = #{variable_2}"
 
 # 5**
 # Написати скрипт який порахує кількість ключив хеша з назвою key без урахування його типу та реєстру, та виведе цю інформацію в консоль
