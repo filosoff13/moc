@@ -42,14 +42,65 @@ class User
       false
     end
   end
-end
 
-u1 = User.new('John', 'Doe', 'Doe.Johngmailgmail.com')
-puts "First name: #{u1.first_name}" # => John
-puts "Last name: #{u1.last_name}" # =>
-puts "Email: #{u1.email}" # => Doe.Johngmailgmail.com
-puts "Full name: #{u1.full_name}" # => John Do
-puts "Valid_email: #{u1.is_valid_email?}" # => false
-# puts "User is valid: #{u1.valid?}" # => false
-# puts "Errors: #{u1.errors}" # => ["last_name can not be empty", "last_name must be a string", "email is invalid"]
-# puts ''\
+  def errors
+    arrors = []
+    if
+      # self.first_name.nil? || self.first_name.empty?
+      self.first_name.nil?
+    then
+      arrors = arrors.push("first_name can not be empty")
+    end
+
+    if self.first_name.instance_of?(String) != true
+    then
+      arrors = arrors.push("first_name must be a string")
+    end
+
+    if
+      self.first_name.length < 3
+    then
+      arrors = arrors.push("first_name is invalid")
+    end
+
+    if
+        # self.last_name.nil? || self.last_name.empty?
+      self.last_name.nil?
+    then
+      arrors = arrors.push("last_name can not be empty")
+    end
+
+    if
+      self.last_name.instance_of?(String) != true
+    then
+      arrors = arrors.push("last_name must be a string")
+    end
+
+    if
+    self.last_name.length < 3
+    then
+      arrors = arrors.push("last_name is invalid")
+    end
+
+    if
+      # self.email.nil? || self.email.empty?
+    self.email.nil?
+    then
+      arrors = arrors.push("email can not be empty")
+    end
+
+    if
+    self.email.instance_of?(String) != true
+    then
+      arrors = arrors.push("email must be a string")
+    end
+
+    if
+    self.is_valid_email?
+    then
+      arrors = arrors.push("email is invalid")
+    end
+
+    return arrors
+  end
+end
