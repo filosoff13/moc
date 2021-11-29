@@ -25,3 +25,11 @@ when 'super_dog'
 else
   puts "Error: name has an invalid value (#{name})"
 end
+
+# user_input = gets.chomp.to_sym
+# animal = {
+#   cat: :meaw,
+#   dog: :bark
+# }
+# output_message = animal[user_input] ? "#{user_input} say - #{animal[user_input]}" : 'Animal not found'
+# puts output_message

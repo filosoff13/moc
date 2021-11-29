@@ -13,28 +13,39 @@
 # 171
 # Умови недотримані, зупиняю виконання програми.
 
+# loop do
+#     puts 'Please, enter a number'
+#     number = gets.to_i
+#     num = number.digits
+#     count_of_numbers = num.count
+
+#     count_of_ones = 0
+#     i = 0
+#     count_of_numbers.times{
+#         if num[i] == 1
+#         then
+#             count_of_ones += 1
+#             i += 1
+#         else
+#             i += 1
+#         end
+#     }
+
+#     if count_of_ones > 1
+#         puts 'Conditions are incorrect, so stop the program'
+#         break
+#     else result = 256 * number
+#         puts "The result is #{result}"
+#     end
+# end
+
 loop do
-    puts 'Please, enter a number'
-    number = gets.to_i
-    num = number.digits
-    count_of_numbers = num.count
-
-    count_of_ones = 0
-    i = 0
-    count_of_numbers.times{
-        if num[i] == 1
-        then
-            count_of_ones += 1
-            i += 1
-        else
-            i += 1
-        end
-    }
-
-    if count_of_ones > 1
-        puts 'Conditions are incorrect, so stop the program'
-        break
-    else result = 256 * number
-        puts "The result is #{result}"
-    end
-end
+    user_input = gets.chomp
+    
+     if user_input.match(/(1\d*){2,}/)
+      puts 'Cycle is over'
+      break
+     else
+      puts user_input.to_i * 256
+     end
+  end
