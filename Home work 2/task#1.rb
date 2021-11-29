@@ -11,19 +11,17 @@
 # Супер_ведмідь говорить - ведмежачий звук           |   Супер_ведмідь говорить - ведмежачий звук
 
 puts 'Please, enter a name of the animal'
-arr = ['super_bear' => 'bear sound', 'super_wolf' => 'wolf sound', 'super_chicken' => 'chicken sound']
 name = gets.chomp.downcase
 
-puts name
 case name
 when 'super_bear'
-    puts "#{name} says - bear sound"
+  puts "#{name} says - bear sound"
 when 'super_wolf'
-    puts "#{name} says - wolf sound"
+  puts "#{name} says - wolf sound"
 when 'super_chicken'
-    puts "#{name} says - chicken sound"
+  puts "#{name} says - chicken sound"
 when 'super_dog'
-    puts "#{name} says - dog sound"
+  puts "#{name} says - dog sound"
 else
-    puts "Error: name has an invalid value (#{name})"
+  puts "Error: name has an invalid value (#{name})"
 end
