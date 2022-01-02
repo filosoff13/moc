@@ -1,12 +1,12 @@
-class BricksFactory
-  # should be able to create a given number of bricks, randomly determine the color of each brick
-  def create_brick(number)
-    # foreach
-    # :color.sample
+class BricksFactory < Brick
+  def initialize(number)
+    number.times do
+       super
+    end
   end
 
-  def totall_number_of_bricks
-    return 
+  def total_number_of_bricks
+    return serial_number
   end
 
   #- which must return the last 10 created unbroken bricks of the requested color.
@@ -18,10 +18,9 @@ class BricksFactory
   def sorted array_of_unbroken_bricks(color)
     
   end
-
 end
 
-Class Brick
+class Brick
   attr_accessor :color, :serial_number, :state
 
   def initialize(color, serial_number)
@@ -32,7 +31,5 @@ Class Brick
     if state <= 20
      @state = "broken"
     end
-
   end
-
 end
