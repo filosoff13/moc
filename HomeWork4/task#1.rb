@@ -25,6 +25,8 @@ class BricksFactory < Brick
 end
 
 class Brick
+
+#   serial
   attr_accessor :color, :serial_number, :state
 
   def initialize(color)
